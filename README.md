@@ -18,7 +18,7 @@ print("combinational circuit delay/ critical path delay =",t3/1000,"ns")
 
 print("delay =",t3,"ps")
 
-# reading arguments
+# reading arguments for timing_calculator.py
 All the arguments are entry time in picoseconds.
 
 The integer returned by the function is the maximum delay in picoseconds.
@@ -26,3 +26,9 @@ The integer returned by the function is the maximum delay in picoseconds.
 For a 1-bit register reg1(en_t,d,c) #d - data bit, c - clk (negative 0/ positive 1), en_t - register enable time in clocks.
 
 reg1(en_t,d,c)[0] is the output time by next state $Q$ and reg1(en_t,d,c)[1] is the output time by next state $\overline{Q}$.
+
+## How to use the future_powerplay.py tool
+
+To see the output just type "python3 future_powerplay.py".
+
+Don't modify the second last argument of any calling function.
