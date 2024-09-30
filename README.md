@@ -8,12 +8,21 @@ You can change the data specification as per your requirement. But don't modify 
 
 #write the timing circuit here
 
-t1 = AD(0,0)
+t1 = AD(0,0) # here 0 is the entry time in picoseconds.
 
 t2 = OR(t1,0)
 
-t3 = reg1(5,0,0)[0] + t2
+t3 = reg1(5,0,0)[0] + t2 
 
 print("combinational circuit delay/ critical path delay =",t3/1000,"ns")
 
 print("delay =",t3,"ps")
+
+# reading arguments
+All the arguments are entry time in picoseconds.
+
+The integer returned by the function is the maximum delay in picoseconds.
+
+For a 1-bit register reg1(en_t,d,c) #d - data bit, c - clk (negative 0/ positive 1), en_t - register enable time in clocks.
+
+reg1(en_t,d,c)[0] is the output time by next state $Q$ and reg1(en_t,d,c)[1] is the output time by next state $\overline{Q}$.
