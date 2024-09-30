@@ -18,7 +18,7 @@ print("combinational circuit delay/ critical path delay =",t3/1000,"ns")
 
 print("delay =",t3,"ps")
 
-# reading arguments for timing_calculator.py
+## reading arguments for timing_calculator.py
 All the arguments are entry time in picoseconds.
 
 The integer returned by the function is the maximum delay in picoseconds.
