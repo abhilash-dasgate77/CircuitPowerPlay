@@ -298,7 +298,7 @@ global_pwr = [0]  #nW at given time instance
 #write circuit code here
 clockCycles = 144 #total clock cycles
 reg1(clockCycles,1,1,-1,-1)
-numberRegs = 3
+numberRegs = 3 # register X,K0,K1
 reg_bit = 64
 for i in range(reg_bit*numberRegs):
 	reg1(clockCycles,1,1,-2,-1)
@@ -314,7 +314,7 @@ Dy_power = alpha * std_load_cap*10**(-15) * Vdd * Vdd * f*10**(6)
 print("dynamic power =",Dy_power*10**6,"uW")
 
 
-print("total power dissipated =",tmp0 + tmp1 + Dy_power,"uW")
+print("total power dissipated =",tmp0 + tmp1 + Dy_power*10**6,"uW")
 '''
 
 
