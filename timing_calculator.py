@@ -1,8 +1,4 @@
 std_cell_delay = 23 #ps
-std_cell_pwr = 0.88 #nW static // no frequency involved.
-std_load_cap = 17.6 #fF
-Vdd = 1.2 #V
-f = 10 #MHz
 # all values are time in pico second
 
 def ND(a,b):
@@ -201,7 +197,7 @@ Ksh16 = 0 #1-bit
 Ksh5 = 0#1-bit
 sm = 0 #1-bit
 
-l = reg1(1,0,0)[0]
+l = reg1(1+8*3,0,0)[0]  # 1 clock cycle to load + 8-bit register loads in parallel for X, K0 and K1.
 X = [l,l,l,l,l,l,l,l,l,l,l,l,l,l,l,l]  #16-bit
 K0 = [l,l,l,l,l,l,l,l,l,l,l,l,l,l,l,l] #16-bit
 K1 = [l,l,l,l,l,l,l,l,l,l,l,l,l,l,l,l] #16-bit
